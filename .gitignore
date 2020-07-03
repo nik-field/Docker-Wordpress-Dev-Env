@@ -1,5 +1,8 @@
 .DS_Store
-themes
+themes/twentynineteen
+themes/twentyseventeen
+themes/twentytwenty
+themes/index.php
 /index.php
 /plugins/akismet
 /plugins/hello.php
