@@ -1,0 +1,3 @@
+[submodule "mo2019"]
+	path = mo-kenney-wp-content
+	url = git@github.com:bearbird/mo-kenney-wp-content.git

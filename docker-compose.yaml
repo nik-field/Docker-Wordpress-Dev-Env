@@ -36,7 +36,9 @@ services:
         define('WP_SITEURL','http://${DOMAIN}');
     volumes:
       - wpdata:/var/www/html
-      - ./:/var/www/html/wp-content
+      - ${WPCONTENT_LOCAL}/plugins/debug-bar:/var/www/html/wp-content/debug-bar
+      - ${WPCONTENT_LOCAL}/plugins/query-monitor:/var/www/html/wp-content/query-monitor
+      - ${WPCONTENT_LOCAL}:/var/www/html/wp-content
 
   wpcli:
     depends_on:
@@ -47,7 +49,8 @@ services:
       /bin/sh -c '
       sleep 15;
       wp core install --url="http://${DOMAIN}"  --title="${DOMAIN}" --admin_user="admin" --admin_password="password" --admin_email="nik@ordinaryartistservices.com";
-      wp plugin activate query-monitor;
+      wp install plugin query-monitor;
+      wp install plugin debug-bar;
       '
     volumes:
       - wpdata:/var/www/html
