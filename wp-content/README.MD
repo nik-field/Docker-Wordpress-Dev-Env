@@ -1,0 +1,1 @@
+After running docker-compose up -d --build from the root of this repo this folder will populate with the bind mounted file system. You can then place the theme/plugin you're developing/testing in its respective folder.
