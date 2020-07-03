@@ -8,3 +8,4 @@ plugins/akismet
 plugins/hello.php
 plugins/index.php
 wp-content/*
+!wp-content/README.MD
